@@ -22,25 +22,6 @@ else{
 document.getElementById("point").innerHTML = "You have obtained a University Admission Score of : <strong>"+ point +"</strong> based on your results, here are our recommendations"
 
 }
-/*
-let nus8585 = ["Law"," Medicine","Dentistry"," Business Analytics"," Computer Science"," Information Security"," Information Systems"," Pharmaceutical Science","	Food Science & Technology","Arts & Social Sciences (Philosophy, Politics & Economics)"];
-let nus8385 = ["Computer Engineering"," Pharmacy"," Data Science & Analytics"," Science"," Environmental Studies"];
-let nus8185 = ["Accountancy"];
-let nus8085 = ["Business Administration"];
-let nus7885 = ["Mechanical Engineering (Aeronautical)"];
-let nus7685 = ["Chemical Engineering"," Arts & Social Sciences"];
-let nus7585 = ["Biomedical Engineering"];
-let nus7385 = ["Industrial Design"," Electrical Engineering"," Engineering Science"," Mechanical Engineering"];
-let nus7377 = ["Arts & Social Sciences (MT Related)"];
-let nus7285 = ["Environmental Engineering"," Materials Science & Engineering"];
-let nus7283 = ["Industrial & Systems Engineering"];
-let nus7085 = ["Architecture"];
-let nus7083 = ["Landscape Architecture"];
-let nus6878 = ["Project & Facilities Management"];
-let nus6783 = ["Civil Engineering"];
-let nus6685 = ["Nursing"];
-let nus6676 = ["Real Estate"];
-*/
 let lower = [];
 let middle = [];
 //let higherSorted = [nus8585,nus8385,nus8185,nus8085,nus7885,nus7685,nus7585,nus7385,nus7285,nus7085,nus6685,nus7283,nus7083,nus6783,nus6878,nus7377,nus6676];
@@ -196,7 +177,7 @@ function print_courses(){
             cell2.innerHTML = " ";
         }
         if (lower.length > i){
-            cell3.innerHTML = "<a href=" +lowerlink[i]+"target='_blank'>" + lower[i] +"</a>";
+            cell3.innerHTML = "<a href=" +lowerlink[i]+" target='_blank'>" + lower[i] +"</a>";
         }
         else{
             cell3.innerHTML = " ";
