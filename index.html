@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <link href="style.css" rel="stylesheet">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!--https://stackoverflow.com/questions/14711552/external-javascript-file-is-not-getting-added-when-running-on-flask -->
+         <script src="project.js"></script>
+
+        <title>Rank Point Calculator</title>
+
+    </head>
+
+    <body  onload="hide()">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/index.html"><span class="blue">Rank Point Calculator</span></a>
+        </nav>
+
+        <main   class="container p-5">
+
+            <h2 class="left">A Level University Ranking Points/UAS Calculator</h2>
+            <br>
+            <p class="left">
+            This tool will calculate your University Admission Score (UAS)/Rank Points based on your 'A' Level Grades. <br>
+            It will also recommend courses that should consider applying for based on your results.
+            </p>
+            <br>
+            <h4 class="left">Enter your grades:</h4>
+            <p class="left">
+                H2 Grades:
+            <label for="H21"></label>
+              <select name="H21" id="H21">
+                <option disabled  value="">Grade</option>
+                <option selected value="20">A</option>
+                <option value="17.5">B</option>
+                <option value="15">C</option>
+                <option value="12.5">D</option>
+                <option value="10">E</option>
+                <option value="5">S</option>
+                <option value="0">U</option>
+              </select>
+            <label for="H22"></label>
+              <select name="H22" id="H22">
+                  <option disabled  value="">Grade</option>
+                <option value="20">A</option>
+                <option selected value="17.5">B</option>
+                <option value="15">C</option>
+                <option value="12.5">D</option>
+                <option value="10">E</option>
+                <option value="5">S</option>
+                <option value="0">U</option>
+              </select>
+            <label for="H23"></label>
+              <select name="H23" id="H23">
+                  <option disabled  value="">Grade</option>
+                <option value="20">A</option>
+                <option value="17.5">B</option>
+                <option selected value="15">C</option>
+                <option value="12.5">D</option>
+                <option value="10">E</option>
+                <option value="5">S</option>
+                <option value="0">U</option>
+              </select>
+            </p>
+            <p class="left">
+                H1 equivalent/H1 Grade:
+                <label for="H1"></label>
+                  <select name="H1" id="H1">
+                      <option disabled  value="">Grade</option>
+                    <option value="10">A</option>
+                    <option value="8.75">B</option>
+                    <option value="7.5">C</option>
+                    <option selected value="6.25">D</option>
+                    <option value="5">E</option>
+                    <option value="2.5">S</option>
+                    <option value="0">U</option>
+                  </select>
+
+            </p>
+            <p class="left">
+                Project Work grade:
+                <label for="PW"></label>
+                  <select name="PW" id="PW">
+                      <option disabled value="">Grade</option>
+                    <option selected value="10">A</option>
+                    <option value="8.75">B</option>
+                    <option value="7.5">C</option>
+                    <option value="6.25">D</option>
+                    <option value="5">E</option>
+                    <option value="2.5">S</option>
+                    <option value="0">U</option>
+                  </select>
+            </p>
+             <p class="left">
+                General Paper grade:
+                <label for="GP"></label>
+                  <select name="GP" id="GP">
+                      <option disabled value="">Grade</option>
+                    <option value="10">A</option>
+                    <option selected value="8.75">B</option>
+                    <option value="7.5">C</option>
+                    <option value="6.25">D</option>
+                    <option value="5">E</option>
+                    <option value="2.5">S</option>
+                    <option value="0">U</option>
+                  </select>
+            </p>
+            <p class="left">
+                Mother Tongue Grade (optional):
+                <label for="MT"></label>
+                  <select name="MT" id="MT">
+                      <option disabled selected value="">Grade</option>
+                    <option value="10">A</option>
+                    <option value="8.75">B</option>
+                    <option value="7.5">C</option>
+                    <option value="6.25">D</option>
+                    <option value="5">E</option>
+                    <option value="2.5">S</option>
+                    <option value="0">U</option>
+                  </select>
+            </p>
+            <p class="left">
+            <button onclick="call()" type="submit" >Calculate</button>
+            </p>
+            <p id="point" class="left">
+
+            </p>
+            <h5 id="higher0" class="left"></h5>
+            <p id="higher" class="left">
+
+            </p>
+            <h5 id="middle0" class="left"></h5>
+            <p id="middle" class="left">
+
+            </p>
+            <h5 id="lower0" class="left"></h5>
+            <p id="lower" class="left">
+
+            <div>
+                <table id="table1" style="table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th>Better than 90th Percentile</th>
+                            <th>Between 90th and 10th percentile</th>
+                            <th>Just below 10th Percentile <br> (One H2 Grade or less difference)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            </p>
+            <h6 id="nusno0" class="left"></h6>
+            <div id="nusno" class="left" style="color:purple;">
+
+            </div>
+            <div>
+                <table id="table2" style="table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th>Better than 90th Percentile</th>
+                            <th>Between 90th and 10th percentile</th>
+                            <th>Just below 10th Percentile <br> (One H2 Grade or less difference)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            </p>
+            <h6 id="ntuno0" class="left"></h6>
+            <div id="ntuno" class="left" style="color:purple;">
+
+            </div>
+
+        </main>
+
+    </body>
+
+</html>
