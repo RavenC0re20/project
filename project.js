@@ -245,7 +245,7 @@ function print_courses(){
             cell2.innerHTML = " ";
         }
         if (lower.length > i){
-            cell3.innerHTML = "<a href=" +lowerlink[i]+"target='_blank'>" + lower[i] +"</a>";
+            cell3.innerHTML = "<a href=" +lowerlink[i]+" target='_blank'>" + lower[i] +"</a>";
         }
         else{
             cell3.innerHTML = " ";
