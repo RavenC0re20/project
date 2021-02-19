@@ -28,7 +28,7 @@ else{
     point = rank_point2.toFixed(2);
 }
 //let s = rank_point.toString();
-document.getElementById("point").innerHTML = "You have obtained a University Admission Score of <strong>"+ point +"</strong>, here are some courses You might want to consider:"
+document.getElementById("point").innerHTML = "You have obtained a University Admission Score of <strong>"+ point +"</strong>, here are some courses you might want to consider:"
 
 subjects = [];
 subjects[0] = document.getElementById("S1").value;
@@ -281,6 +281,7 @@ function print_courses(){
             suss.sort((a, b) => (a.name > b.name) ? 1 : -1);
             sit.sort((a, b) => (a.name > b.name) ? 1 : -1);
             sutd.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            console.log(nus);
         }
         else if (sort == 2){
             nus.sort((a, b) => (a.name < b.name) ? 1 : -1);
@@ -339,7 +340,8 @@ function print_courses(){
         //console.log("My object: ",nus[i].max);
 
         //checks eligibility for science course(edge case)
-        if(i == 27 || i == 28){
+        let sub = ["Science","Science (Food Science & Technology)"];
+        if(nus[i].name == sub[0] || i == sub[1]){
             console.log(nus[i].name);
             let subjectHolder;
             if(nus[i].oneof1 !== undefined && nus[i].oneof1.length > 0){
@@ -810,7 +812,7 @@ function print_courses(){
                         counter1++;
                     }
                 }
-                if(counter1 == ntu[i].oneof1.length){
+                if(counter1 == sit[i].oneof1.length){
                     sit[i].bool = false;
                     sitNotEli.push("<a href=" +sit[i]["link"]+" target='_blank'> " + sit[i]["name"]+"</a>");
                 }
