@@ -83,8 +83,8 @@ nus[5] = {min:73.75,max:85,name:"Industrial Design*",link:"https://www.sde.nus.e
 nus[6] = {min:70,max:83.75,name:"Landscape Architecture*",link:"https://www.sde.nus.edu.sg/arch/programmes/bachelor-of-landscape-architecture/",bool:true,oneof1:chemmathphy,oneof2:[]};
 nus[7] = {min:85,max:85,name:"Arts & Social Sciences (Philosophy, Politics & Economics)*",link:"",bool:true,oneof1:[],oneof2:[]};
 nus[8] = {min:66.25,max:76.25,name:"Real Estate",link:"https://www.sde.nus.edu.sg/rst/",bool:true,oneof1:chemmathphy,oneof2:[]};
-nus[9] = {min:75,max:85,name:"Biomedical Engineering",link:"https://www.eng.nus.edu.sg/bme/",bool:true,oneof1:h2math,oneof2:["h2physics","h2biology"]};
-nus[10] = {min:76.25,max:85,name:"Chemical Engineering",link:"https://www.eng.nus.edu.sg/chbe/",bool:true,compul:"h2chemistry",oneof1:h2math,oneof2:["h2physics"]};
+nus[9] = {min:75,max:85,name:"Biomedical Engineering",link:"https://www.eng.nus.edu.sg/bme/",bool:true,oneof1:h2math,oneof2:["h2physics","h2biology","ophysics"]};
+nus[10] = {min:76.25,max:85,name:"Chemical Engineering",link:"https://www.eng.nus.edu.sg/chbe/",bool:true,compul:"h2chemistry",oneof1:h2math,oneof2:["h2physics","ophysics"]};
 nus[11] = {min:67.5,max:83.75,name:"Civil Engineering",link:"https://www.eng.nus.edu.sg/cee/",bool:true,oneof1:h2math,oneof2:h2phychem};
 nus[12] = {min:73.75,max:85,name:"Electrical Engineering",link:"https://www.eng.nus.edu.sg/ece/",bool:true,oneof1:h2math,oneof2:h2phychem};
 nus[13] = {min:73.75,max:85,name:"Engineering Science",link:"https://www.eng.nus.edu.sg/esp/",bool:true,oneof1:h2math,oneof2:["h2physics"]};
@@ -122,9 +122,9 @@ ntu[7] = {min:81.25,max:85,name:"Computer Science",link:"http://scse.ntu.edu.sg/
 ntu[8] = {min:80,max:85,name:"Aerospace Engineering",link:"http://www.mae.ntu.edu.sg/Programmes/CurrentStudents/UG%28Full-Time%29/AE/Pages/default.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc,oneof3:physics};
 ntu[9] = {min:80,max:85,name:"Communication Studies*",link:"http://www.wkwsci.ntu.edu.sg/programmes/CurrentStudents/Undergraduate/Pages/Undergraduate.aspx",bool:true,oneof1:omath,oneof2:[]};
 ntu[10] = {min:78.75,max:85,name:"Computer Engineering",link:"https://sce.ntu.edu.sg/Programmes/CurrentStudents/Undergraduate/Pages/CE.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc,oneof:physics};
-ntu[11] = {min:78.75,max:85,name:"Science (Education)",link:"https://www.nie.edu.sg/our-people/academic-groups/natural-sciences-and-science-education/programmes/bsc-education",bool:true,oneof1:omath,oneof2:[]};
+ntu[11] = {min:78.75,max:85,name:"Science (Education)*",link:"https://www.nie.edu.sg/our-people/academic-groups/natural-sciences-and-science-education/programmes/bsc-education",bool:true,oneof1:omath,oneof2:[]};
 ntu[12] = {min:77.5,max:85,name:"Psychology",link:"http://www.sss.ntu.edu.sg/Programmes/psychology/undergraduate/Pages/Home.aspx",bool:true,oneof1:h1math,oneof2:[]};
-ntu[13] = {min:76.25,max:85,name:"Arts (Education)",link:"https://www.nie.edu.sg/teacher-education/undergraduate-programmes",bool:true,oneof1:omath,oneof2:[]};
+ntu[13] = {min:76.25,max:85,name:"Arts (Education)*",link:"https://www.nie.edu.sg/teacher-education/undergraduate-programmes",bool:true,oneof1:omath,oneof2:[]};
 ntu[14] = {min:75,max:85,name:"Public Policy & Global Affairs",link:"http://www.sss.ntu.edu.sg/Programmes/ppga/undergraduate/Pages/Bachelor-of-Arts-%28Hons%29-in-Public-Policy-and-Global-Affairs.aspx",bool:true,oneof1:[],oneof2:[]};
 ntu[15] = {min:73.75,max:85,name:"Chemical & Biomolecular Engineering",link:"http://www.scbe.ntu.edu.sg/Programmes/ProspectiveStudents/Bachelor%20Of%20Chemical%20and%20Biomolecular%20Engineering/Pages/CBE_Programme.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc};
 ntu[16] = {min:73.75,max:85,name:"Chemical & Biological Chemistry",link:"https://spms.ntu.edu.sg/ChemistryandBiologicalChemistry/Pages/Home.aspx",bool:true,oneof1:["h2chemistry"],oneof2:["h2math","h2furthermath","h2physics"]};
@@ -141,9 +141,9 @@ ntu[26] = {min:68.75,max:85,name:"Physics/ Applied Physics",link:"https://spms.n
 ntu[27] = {min:68.75,max:85,name:"English*",link:"http://www.soh.ntu.edu.sg/Programmes/english/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]};
 ntu[28] = {min:68.75,max:81.25,name:"Philosophy*",link:"http://www.soh.ntu.edu.sg/Programmes/philosophy/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]};
 ntu[29] = {min:67.5,max:85,name:"Environmental Engineering",link:"http://www.cee.ntu.edu.sg/Programmes/undergraduate/ENE/Pages/Home.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc,oneof3:physics};
-ntu[30] = {min:67.5,max:85,name:"Art, Design & Media*^",link:"http://www.adm.ntu.edu.sg/Pages/index.aspx",bool:true,oneof1:omath,oneof2:[]}
-ntu[31] = {min:67.5,max:83.75,name:"Chinese",link:"http://www.soh.ntu.edu.sg/Programmes/chinese/en/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]}
-ntu[32] = {min:67.5,max:85,name:"History*",link:"http://www.soh.ntu.edu.sg/Programmes/history/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]}
+ntu[30] = {min:67.5,max:85,name:"Art, Design & Media*^",link:"http://www.adm.ntu.edu.sg/Pages/index.aspx",bool:true,oneof1:omath,oneof2:[]};
+ntu[31] = {min:67.5,max:83.75,name:"Chinese",link:"http://www.soh.ntu.edu.sg/Programmes/chinese/en/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]};
+ntu[32] = {min:67.5,max:85,name:"History*",link:"http://www.soh.ntu.edu.sg/Programmes/history/Pages/Home.aspx",bool:true,oneof1:[],oneof2:[]};
 ntu[33] = {min:66.25,max:85,name:"Mechanical Engineering",link:"http://www.mae.ntu.edu.sg/Programmes/CurrentStudents/UG%28Full-Time%29/ME/Pages/default.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc,oneof3:physics};
 ntu[34] = {min:65,max:78.75,name:"Maritime Studies",link:"http://www.cee.ntu.edu.sg/Programmes/undergraduate/MS/Pages/Home.aspx",bool:true,oneof1:omath,oneof2:["h2physics","h2chemistry","h2biology","h1biology","h1chemistry","h1physics","ophysics","obiology","ochemistry"]};
 ntu[35] = {min:65,max:85,name:"Materials Engineering",link:"http://www.mse.ntu.edu.sg/Pages/Home.aspx",bool:true,oneof1:h2math,oneof2:h2pcbc,oneof3:physics};
@@ -871,6 +871,8 @@ function hide(){
     b.style.display = "none";
     c.style.display = "none";
     document.getElementById("sort_selection").style.visibility = "hidden";
+    document.getElementById("nus*").style.visibility = "hidden";
+    document.getElementById("ntu*").style.visibility = "hidden";
 }
 
 function showtable(){
@@ -905,6 +907,8 @@ Do take note that certain courses may have additional requirements that need to 
     show_sutd_table();
 
     document.getElementById("sort_selection").style.visibility = "initial";
+    document.getElementById("nus*").style.visibility = "initial";
+    document.getElementById("ntu*").style.visibility = "initial";
 
 
 }
