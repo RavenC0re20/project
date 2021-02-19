@@ -273,6 +273,34 @@ document.getElementsByTagName('select').onchange = call();
 
 function print_courses(){
 
+    //sort
+        if (sort == 1){
+            nus.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            ntu.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            smu.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            suss.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            sit.sort((a, b) => (a.name > b.name) ? 1 : -1);
+            sutd.sort((a, b) => (a.name > b.name) ? 1 : -1);
+        }
+        else if (sort == 2){
+            nus.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            ntu.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            smu.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            suss.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            sit.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            sutd.sort((a, b) => (a.name < b.name) ? 1 : -1);
+        }
+        else if (sort == 3){
+            nus.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
+            ntu.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
+            smu.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
+        }
+        else if (sort == 4){
+            nus.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
+            ntu.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
+            smu.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
+        }
+
     //resets bool of all ntu nus
     for (let i = 0; i < nus.length; i++){
         nus[i].bool = true;
@@ -457,34 +485,6 @@ function print_courses(){
         else{
             new_point = point;
             hide_bonus_points();
-        }
-
-        //sort
-        if (sort == 1){
-            nus.sort((a, b) => (a.name > b.name) ? 1 : -1);
-            ntu.sort((a, b) => (a.name > b.name) ? 1 : -1);
-            smu.sort((a, b) => (a.name > b.name) ? 1 : -1);
-            suss.sort((a, b) => (a.name > b.name) ? 1 : -1);
-            sit.sort((a, b) => (a.name > b.name) ? 1 : -1);
-            sutd.sort((a, b) => (a.name > b.name) ? 1 : -1);
-        }
-        else if (sort == 2){
-            nus.sort((a, b) => (a.name < b.name) ? 1 : -1);
-            ntu.sort((a, b) => (a.name < b.name) ? 1 : -1);
-            smu.sort((a, b) => (a.name < b.name) ? 1 : -1);
-            suss.sort((a, b) => (a.name < b.name) ? 1 : -1);
-            sit.sort((a, b) => (a.name < b.name) ? 1 : -1);
-            sutd.sort((a, b) => (a.name < b.name) ? 1 : -1);
-        }
-        else if (sort == 3){
-            nus.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
-            ntu.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
-            smu.sort((a, b) => (Number(a.min) < Number(b.min)) ? 1 : -1);
-        }
-        else if (sort == 4){
-            nus.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
-            ntu.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
-            smu.sort((a, b) => (Number(a.min) > Number(b.min)) ? 1 : -1);
         }
 
         if (nus[i].bool){  //REMEMBER TO RESET AT THE START
